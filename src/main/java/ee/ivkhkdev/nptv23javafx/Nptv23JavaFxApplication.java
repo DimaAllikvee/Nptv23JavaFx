@@ -23,10 +23,10 @@ public class Nptv23JavaFxApplication extends Application {
 	public void start(Stage stage) throws Exception {
 		SpringFXMLLoader springFXMLLoader = applicationContext.getBean(SpringFXMLLoader.class);
 
-		FXMLLoader fxmlLoader = springFXMLLoader.load("/nptv23javafx.fxml");
+		FXMLLoader fxmlLoader = springFXMLLoader.load("/main/mainForm.fxml");
 		Parent root = fxmlLoader.load();
 
-		Scene scene = new Scene(root, 600, 400);
+		Scene scene = new Scene(root);
 		stage.setScene(scene);
 		stage.setTitle("NPTV23JavaFX");
 		stage.centerOnScreen();
