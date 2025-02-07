@@ -12,7 +12,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class Nptv23JavaFxApplication extends Application {
+
 	public static ConfigurableApplicationContext applicationContext;
+	public static Stage primaryStage;
 
 	public static void main(String[] args) {
 		applicationContext = SpringApplication.run(Nptv23JavaFxApplication.class, args);
@@ -21,6 +23,9 @@ public class Nptv23JavaFxApplication extends Application {
 
 	@Override
 	public void start(Stage stage) throws Exception {
+
+		Nptv23JavaFxApplication.primaryStage = stage;
+
 		SpringFXMLLoader springFXMLLoader = applicationContext.getBean(SpringFXMLLoader.class);
 
 		FXMLLoader fxmlLoader = springFXMLLoader.load("/main/mainForm.fxml");

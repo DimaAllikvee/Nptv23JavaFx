@@ -7,20 +7,14 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.layout.VBox;
 import org.springframework.stereotype.Component;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 @Component
 public class MainFormController implements Initializable {
-
     private SpringFXMLLoader springFXMLLoader;
-
-
-    @FXML
-    private VBox vbMainFormRoot;
-
+    @FXML private VBox vbMainFormRoot;
 
     public MainFormController(SpringFXMLLoader springFXMLLoader) {
         this.springFXMLLoader = springFXMLLoader;

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="vbBookFormRoot"
+      xmlns="http://javafx.com/javafx/23.0.1"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ee.ivkhkdev.nptv23javafx.controller.BookFormController"
+      prefHeight="350.0"
+      prefWidth="600.0"
+      style="-fx-background-color: #f9f9f9; -fx-padding: 20;"
+>
+
+   <children>
+      <!-- Заголовок формы -->
+      <Label text="Новая книга"
+             alignment="CENTER"
+             style="-fx-font-size: 22; -fx-font-weight: bold; -fx-text-fill: #333;"
+             prefHeight="40" prefWidth="600" />
+
+      <!-- Основная сетка с полями ввода -->
+      <GridPane hgap="10" vgap="10">
+         <padding>
+            <Insets top="10" right="20" bottom="10" left="20"/>
+         </padding>
+
+         <!-- Название -->
+         <Label text="Название:"
+                GridPane.rowIndex="0" GridPane.columnIndex="0" />
+         <TextField fx:id="tfTitle"
+                    GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+         <!-- Авторы -->
+         <Label text="Авторы:"
+                GridPane.rowIndex="1" GridPane.columnIndex="0" />
+         <TextField fx:id="tfAuthors"
+                    GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+         <!-- Год публикации -->
+         <Label text="Год публикации:"
+                GridPane.rowIndex="2" GridPane.columnIndex="0" />
+         <TextField fx:id="tfPublishedYear"
+                    GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+         <!-- Количество -->
+         <Label text="Количество:"
+                GridPane.rowIndex="3" GridPane.columnIndex="0" />
+         <TextField fx:id="tfQuantity"
+                    GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+         <!-- В наличии -->
+         <Label text="В наличии:"
+                GridPane.rowIndex="4" GridPane.columnIndex="0" />
+         <TextField fx:id="tfCount"
+                    GridPane.rowIndex="4" GridPane.columnIndex="1" />
+      </GridPane>
+
+      <!-- Кнопки внизу (пока одна — "Сохранить") -->
+      <HBox alignment="CENTER" spacing="10">
+         <Button text="Сохранить"
+                 onAction="#loadMainForm"
+                 style="-fx-font-size: 14; -fx-pref-width: 100;" />
+      </HBox>
+   </children>
+</VBox>
