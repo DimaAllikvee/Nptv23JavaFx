@@ -11,7 +11,9 @@
    <HBox prefHeight="100.0" prefWidth="200.0">
       <children>
           <Button fx:id="button" onAction="#buttonClick" text="ClickMe" />
-         <Button fx:id="button2" mnemonicParsing="false" prefHeight="25.0" prefWidth="107.0" text="И меня нажми" onAction="#button2Click"/>
+          <Button fx:id="button2" mnemonicParsing="false" onAction="#button2Click"
+                  prefHeight="25.0" prefWidth="107.0" text="И меня нажми" />
+
       </children>
    </HBox>
 </VBox>

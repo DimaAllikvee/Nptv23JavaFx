@@ -2,15 +2,10 @@ package ee.ivkhkdev.nptv23javafx;
 
 import ee.ivkhkdev.nptv23javafx.tools.SpringFXMLLoader;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import org.springframework.boot.ConfigurableBootstrapContext;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -30,7 +25,8 @@ public class Nptv23JavaFxApplication extends Application {
 
 		FXMLLoader fxmlLoader = springFXMLLoader.load("/nptv23javafx.fxml");
 		Parent root = fxmlLoader.load();
-		Scene scene = new Scene(root , 600, 400);
+
+		Scene scene = new Scene(root, 600, 400);
 		stage.setScene(scene);
 		stage.setTitle("NPTV23JavaFX");
 		stage.centerOnScreen();

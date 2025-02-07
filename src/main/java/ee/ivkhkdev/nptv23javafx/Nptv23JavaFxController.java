@@ -9,18 +9,24 @@ import org.springframework.stereotype.Component;
 @Component
 public class Nptv23JavaFxController {
     private final AppService appService;
-    @FXML private Label label;
-    @FXML private Button button;
+
+    @FXML
+    private Label label;
+
+    @FXML
+    private Button button;
 
     public Nptv23JavaFxController(AppService appService) {
         this.appService = appService;
     }
 
-    @FXML private void buttonClick() {
+    @FXML
+    private void buttonClick() {
         label.setText("Hello from Controller!");
     }
 
-    @FXML private void button2Click() {
+    @FXML
+    private void button2Click() {
         label.setText(appService.myService());
     }
 }
